@@ -3,11 +3,11 @@ import React from 'react';
 const ValetNavbar = () => {
    
     return (
-        <div class="d-flex justify-content-around bg-secondary">
-            <div>Cars on board: 8</div>
-            <div>Check-ins: 25</div>
-            <div>Check-outs: 16</div>
-            <div>Paid: 17</div>
+        <div className="d-flex justify-content-around bg-primary text-white">
+            <div className="text-center">Cars on board: 8</div>
+            <div className="text-center">Check-ins: 25</div>
+            <div className="text-center">Check-outs: 16</div>
+            <div className="text-center">Paid: 17</div>
         </div>
     );
 };
