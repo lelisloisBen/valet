@@ -1,0 +1,10 @@
+.section {
+    z-index: 32;
+    position: absolute;
+    top: 100px;
+    left: 2%;
+    overflow: hidden;
+}
+.logo {
+    width: 30%;
+}

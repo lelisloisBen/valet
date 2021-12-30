@@ -1,0 +1,104 @@
+.navBarShare {
+    background-color: white;
+    border-bottom: 1px solid lightgrey;
+}
+.btn {
+    text-decoration: none;
+    color: #66AF33;
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: bold;
+    margin: 0 10px 0 10px;
+}
+.btn:hover {
+    text-decoration: none;
+    color: #404040;
+}
+
+.dropBtn {
+    color: #66AF33;
+    outline: none;
+    margin-left: 20px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.dropBtn:hover {
+    color: #000000!important;
+    text-decoration: none;
+}
+.dropBtn:focus {
+    outline: none;
+}
+.imgCircle {
+    border-radius: 50%;
+    width: 30px;
+}
+.navbarCenter {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.navbarCenter a {
+    text-decoration: none;
+    margin: 0 10px 0 10px;
+    color: #404040;
+    font-weight: bold;
+    height: 65px;
+    line-height: 40px;
+}
+.navbarCenter a:hover {
+    color: #66AF33;
+}
+.helpMenu {
+    color: #66AF33;
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: bold;
+    outline: none;
+}
+.helpMenu:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+.helpMenu:hover {
+    color: #404040;
+}
+.mobile {
+    display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+    display: none;
+}
+.mobile button {
+    color: #404040;
+}
+.mobile button:hover {
+    color: #66AF33;
+}
+.mobile button:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+
+
+@media (max-width: 1330px) {
+	.navbarCenter {
+		display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
+@media (max-width: 1400px) {
+	.homeLink {
+        display: none;
+    }
+}
