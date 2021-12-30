@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Nav from '../../components/Navbar/Navbar';
 import styles from './Home.module.css';
 
@@ -34,36 +35,36 @@ const Home = () => {
         <div className="container mt-2">
             <div className="row">
                 <div className="col-4 text-center">
-                    <button type="button" className={[styles.button, styles.btnBlue].join(' ')}>
+                    <Link to='/more' type="button" className={[styles.button, styles.btnBlue].join(' ')}>
                         MORE <i className="far fa-caret-square-down"></i>
-                    </button>
+                    </Link>
                 </div>
                 <div className="col-4 text-center">
-                    <button type="button" className={[styles.button, styles.btnBlue].join(' ')}>
+                    <Link to='/search' type="button" className={[styles.button, styles.btnBlue].join(' ')}>
                         SEARCH <i className="fas fa-search"></i>
-                    </button>
+                    </Link>
                 </div>
                 <div className="col-4 text-center">
-                    <button type="button" className={[styles.button, styles.btnGreen].join(' ')}>
+                    <Link to='/arrival' type="button" className={[styles.button, styles.btnGreen].join(' ')}>
                         ARRIVAL <i className="fas fa-tag"></i>
-                    </button>
+                    </Link>
                 </div>
             </div>
             <div className="row">
                 <div className="col-4 text-center">
-                    <button type="button" className={[styles.button, styles.btnBlue].join(' ')}>
+                    <Link to='/clock' type="button" className={[styles.button, styles.btnBlue].join(' ')}>
                         IN/OUT <i className="far fa-clock"></i>
-                    </button>
+                    </Link>
                 </div>
                 <div className="col-4 text-center">
-                    <button type="button" className={[styles.button, styles.btnBlue].join(' ')}>
+                    <Link to='/status' type="button" className={[styles.button, styles.btnBlue].join(' ')}>
                         STATUS <i className="fas fa-map-marker-alt"></i>
-                    </button>
+                    </Link>
                 </div>
                 <div className="col-4 text-center">
-                    <button type="button" className={[styles.button, styles.btnRed].join(' ')}>
+                    <Link to='/depart' type="button" className={[styles.button, styles.btnRed].join(' ')}>
                         DEPART <i className="fas fa-arrow-right"></i>
-                    </button>
+                    </Link>
                 </div>
             </div>
             <hr />

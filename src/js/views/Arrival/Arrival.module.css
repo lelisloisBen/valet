@@ -1,0 +1,75 @@
+.nav {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.closingDiv {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.closingX {
+    color: white;
+    font-size: 20px;
+}
+.input {
+    width: 100%;
+    height: 36px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+}
+.sendText {
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    height: 36px;
+    background-color: greenyellow;
+}
+.scan {
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    padding: auto;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 30px;
+}
+.countryPhoneCode {
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    height: 36px;
+}
+.dangerIcon {
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    height: 36px;
+    background-color: white;
+    color: red;
+}
+.payementBtn {
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    height: 60px;
+    background-color: lightblue;
+    color: green;
+}
