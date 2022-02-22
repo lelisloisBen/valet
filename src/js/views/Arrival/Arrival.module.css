@@ -73,3 +73,7 @@
     background-color: lightblue;
     color: green;
 }
+
+.previewTag img {
+    width: 20%;
+}

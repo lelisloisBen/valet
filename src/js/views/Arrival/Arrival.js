@@ -1,13 +1,87 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Arrival.module.css';
+import swal from 'sweetalert';
 
 const Arrival = () => {
+
+    const [image, setImage] = useState({ preview: '', raw: '' })
+    const handleChange = (e) => {
+        setImage({
+        preview: URL.createObjectURL(e.target.files[0]),
+        raw: e.target.files[0]
+        })
+    }
+
+    const handleUpload = async (e) => {
+        e.preventDefault()
+        const formData = new FormData()
+        formData.append('image', image.raw)
+        const config = { headers: 
+         {'content-type': 'multipart/form-data'} 
+        }
+        await uploadToBackend('https://valetapp-backend.herokuapp.com/tag', formData, config)
+    }
+
+    const uploadToBackend = (endP, img, conf) => {
+        fetch(endP, {
+            method: 'POST',
+            body: img,
+            cors: 'no-cors',
+            headers: conf
+            }).then(res => res.json())
+            .then(response => {
+                console.log(response.tag);
+                if (response.mgs === "error" ) {
+                    swal("didn't work", "Try a better picture", "error", {
+                        button: "TRY AGAIN!",
+                      })
+                } else {
+                    swal("Upload success", "Good Job", "success", {
+                        button: "Go Park",
+                      })
+                }
+            })
+            .catch(error => {
+                swal("Something Went Wrong!", JSON.stringify("error: => "+ error), "error", {
+                    button: "OK",
+                  })
+            });
+    }
+
+
     return (
         <>
         <div className="d-flex justify-content-around bg-warning py-2 ">
             <div className={styles.nav}>ARRIVAL <i className="fas fa-tag"></i></div>
         </div>
+        {/* <form method="post" enctype="multipart/form-data">
+            <div>
+                <label for="file">Choose file to upload</label>
+                <input type="file" id="file" name="file" multiple />
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
+        </form> */}
+        <div>
+            <label className={styles.previewTag} htmlFor="upload-button">
+            {image.preview ? <img src={image.preview} /> : (
+            <>
+                <span className="fa-stack fa-2x mt-3 mb-2">
+                <i className="fas fa-circle fa-stack-2x" />
+                <i className="fas fa-store fa-stack-1x fa-inverse" />
+                </span>
+                <h5>Click to choose or drop your photo</h5>
+            </>)}
+            </label>
+            <input type="file" id="upload-button" style={{ display: 'none' }} onChange={handleChange} />
+            <br />
+            <button onClick={handleUpload}>Upload</button>
+        </div>
+
+
+
         <div className={styles.closingDiv}>
             <Link className={styles.closingX} to="/home">
                 <i class="far fa-times-circle"></i>
